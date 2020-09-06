@@ -150,7 +150,6 @@ namespace FDiscord
         }
 
 
-        // TODO: Change this so it uses one thread for each user
         private void messageSpam_BTN_Click(object sender, EventArgs e)
         {
             if(channedId.Text != "" && message.Text != "" && tokens.Count() > 0)
