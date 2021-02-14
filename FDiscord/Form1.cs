@@ -37,7 +37,7 @@ namespace FDiscord
             }
             else
             {
-                console.Text += Environment.NewLine + "[" + DateTime.Now.ToString("h:mm:ss") + "] " + text;
+                console.Text = Environment.NewLine + "[" + DateTime.Now.ToString("h:mm:ss") + "] " + text + console.Text;
             }
         }
 
@@ -154,34 +154,42 @@ namespace FDiscord
         {
             if(channedId.Text != "" && message.Text != "" && tokens.Count() > 0)
             {
-                messageSpam = true;
-                Start(() =>
+                if(!messageSpam)
                 {
-                    while (messageSpam)
+                    write2console("Started message spam!");
+                    messageSpam = true;
+                    Start(() =>
                     {
-                        for (int i = 0; i <= tokens.Count() - 1; i++)
+                        while (messageSpam)
                         {
-                            string response = libdiscord.SendMsg(tokens[i], channedId.Text, message.Text);
-                            if (response.Contains("StatusCode: 20"))
+                            for (int i = 0; i <= tokens.Count() - 1; i++)
                             {
-                                write2console("Success");
+                                string response = libdiscord.SendMsg(tokens[i], channedId.Text, message.Text);
+                                if (response.Contains("StatusCode: 20"))
+                                {
+                                    write2console("Success");
+                                }
+                                else if (response.Contains("StatusCode: 401"))
+                                {
+                                    write2console("Unauthorized");
+                                }
+                                else if (response.Contains("StatusCode: 429"))
+                                {
+                                    write2console("Rate limited");
+                                }
+                                else
+                                {
+                                    write2console(response);
+                                }
+                                Thread.Sleep(700);
                             }
-                            else if (response.Contains("StatusCode: 401"))
-                            {
-                                write2console("Unauthorized");
-                            }
-                            else if (response.Contains("StatusCode: 429"))
-                            {
-                                write2console("Rate limited");
-                            }
-                            else
-                            {
-                                write2console(response);
-                            }
-                            Thread.Sleep(650);
                         }
-                    }
-                });
+                    });
+                }
+                else
+                {
+                    write2console("Already started!");
+                }
             }
             else
             {
@@ -192,6 +200,12 @@ namespace FDiscord
         private void messageSpam_Stop_BTN_Click(object sender, EventArgs e)
         {
             messageSpam = false;
+            write2console("Stopped message spam!");
+        }
+
+        private void clearLog_BTN_Click(object sender, EventArgs e)
+        {
+            console.Text = "";
         }
     }
 }

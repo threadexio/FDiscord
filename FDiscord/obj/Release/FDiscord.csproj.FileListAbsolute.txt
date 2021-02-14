@@ -1,0 +1,5 @@
+C:\Users\kat\source\repos\threadexio\FDiscord\FDiscord\obj\Release\FDiscord.csprojAssemblyReference.cache
+C:\Users\kat\source\repos\threadexio\FDiscord\FDiscord\obj\Release\FDiscord.Form1.resources
+C:\Users\kat\source\repos\threadexio\FDiscord\FDiscord\obj\Release\FDiscord.Properties.Resources.resources
+C:\Users\kat\source\repos\threadexio\FDiscord\FDiscord\obj\Release\FDiscord.csproj.GenerateResource.cache
+C:\Users\kat\source\repos\threadexio\FDiscord\FDiscord\obj\Release\FDiscord.csproj.CoreCompileInputs.cache

@@ -49,6 +49,7 @@
             this.serverInvite_label = new System.Windows.Forms.Label();
             this.serverFloodLabel = new System.Windows.Forms.Label();
             this.messageSpamPanel = new System.Windows.Forms.Panel();
+            this.messageSpam_Stop_BTN = new System.Windows.Forms.Button();
             this.messageSpam_BTN = new System.Windows.Forms.Button();
             this.message = new System.Windows.Forms.TextBox();
             this.messageLabel = new System.Windows.Forms.Label();
@@ -57,7 +58,7 @@
             this.messageSpamLabel = new System.Windows.Forms.Label();
             this.creditsLabel = new System.Windows.Forms.Label();
             this.console = new System.Windows.Forms.TextBox();
-            this.messageSpam_Stop_BTN = new System.Windows.Forms.Button();
+            this.clearLog_BTN = new System.Windows.Forms.Button();
             this.tokenPanel.SuspendLayout();
             this.friendFloodPanel.SuspendLayout();
             this.serverFloodPanel.SuspendLayout();
@@ -239,7 +240,7 @@
             this.serverFloodPanel.Controls.Add(this.serverInvite);
             this.serverFloodPanel.Controls.Add(this.serverInvite_label);
             this.serverFloodPanel.Controls.Add(this.serverFloodLabel);
-            this.serverFloodPanel.Location = new System.Drawing.Point(319, 405);
+            this.serverFloodPanel.Location = new System.Drawing.Point(319, 356);
             this.serverFloodPanel.Name = "serverFloodPanel";
             this.serverFloodPanel.Size = new System.Drawing.Size(269, 135);
             this.serverFloodPanel.TabIndex = 9;
@@ -307,6 +308,20 @@
             this.messageSpamPanel.Name = "messageSpamPanel";
             this.messageSpamPanel.Size = new System.Drawing.Size(268, 528);
             this.messageSpamPanel.TabIndex = 10;
+            // 
+            // messageSpam_Stop_BTN
+            // 
+            this.messageSpam_Stop_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.messageSpam_Stop_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.messageSpam_Stop_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.messageSpam_Stop_BTN.Location = new System.Drawing.Point(3, 483);
+            this.messageSpam_Stop_BTN.Name = "messageSpam_Stop_BTN";
+            this.messageSpam_Stop_BTN.Size = new System.Drawing.Size(258, 36);
+            this.messageSpam_Stop_BTN.TabIndex = 12;
+            this.messageSpam_Stop_BTN.Text = "Stop";
+            this.messageSpam_Stop_BTN.UseVisualStyleBackColor = true;
+            this.messageSpam_Stop_BTN.Click += new System.EventHandler(this.messageSpam_Stop_BTN_Click);
             // 
             // messageSpam_BTN
             // 
@@ -388,9 +403,9 @@
             this.creditsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.creditsLabel.Location = new System.Drawing.Point(319, 147);
             this.creditsLabel.Name = "creditsLabel";
-            this.creditsLabel.Size = new System.Drawing.Size(263, 255);
+            this.creditsLabel.Size = new System.Drawing.Size(263, 206);
             this.creditsLabel.TabIndex = 11;
-            this.creditsLabel.Text = "By threadexio on Github";
+            this.creditsLabel.Text = "V1.1\r\nBy threadexio on Github";
             this.creditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // console
@@ -407,19 +422,19 @@
             this.console.TabStop = false;
             this.console.WordWrap = false;
             // 
-            // messageSpam_Stop_BTN
+            // clearLog_BTN
             // 
-            this.messageSpam_Stop_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.clearLog_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.messageSpam_Stop_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.messageSpam_Stop_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.messageSpam_Stop_BTN.Location = new System.Drawing.Point(3, 483);
-            this.messageSpam_Stop_BTN.Name = "messageSpam_Stop_BTN";
-            this.messageSpam_Stop_BTN.Size = new System.Drawing.Size(258, 36);
-            this.messageSpam_Stop_BTN.TabIndex = 12;
-            this.messageSpam_Stop_BTN.Text = "Stop";
-            this.messageSpam_Stop_BTN.UseVisualStyleBackColor = true;
-            this.messageSpam_Stop_BTN.Click += new System.EventHandler(this.messageSpam_Stop_BTN_Click);
+            this.clearLog_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearLog_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.clearLog_BTN.Location = new System.Drawing.Point(319, 497);
+            this.clearLog_BTN.Name = "clearLog_BTN";
+            this.clearLog_BTN.Size = new System.Drawing.Size(269, 43);
+            this.clearLog_BTN.TabIndex = 13;
+            this.clearLog_BTN.Text = "Clear Log";
+            this.clearLog_BTN.UseVisualStyleBackColor = true;
+            this.clearLog_BTN.Click += new System.EventHandler(this.clearLog_BTN_Click);
             // 
             // Form1
             // 
@@ -427,6 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(874, 552);
+            this.Controls.Add(this.clearLog_BTN);
             this.Controls.Add(this.console);
             this.Controls.Add(this.creditsLabel);
             this.Controls.Add(this.messageSpamPanel);
@@ -482,6 +498,7 @@
         private System.Windows.Forms.Label creditsLabel;
         private System.Windows.Forms.TextBox console;
         private System.Windows.Forms.Button messageSpam_Stop_BTN;
+        private System.Windows.Forms.Button clearLog_BTN;
     }
 }
 
