@@ -57,12 +57,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.messageSpamLabel = new System.Windows.Forms.Label();
             this.creditsLabel = new System.Windows.Forms.Label();
-            this.console = new System.Windows.Forms.TextBox();
             this.clearLog_BTN = new System.Windows.Forms.Button();
+            this.nickChangerPanel = new System.Windows.Forms.Panel();
+            this.nickChanger_BTN = new System.Windows.Forms.Button();
+            this.nick = new System.Windows.Forms.TextBox();
+            this.nickLablel = new System.Windows.Forms.Label();
+            this.nickChangerLabel = new System.Windows.Forms.Label();
+            this.serverid = new System.Windows.Forms.TextBox();
+            this.serveridLabel = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.nickChanger_Stop_BTN = new System.Windows.Forms.Button();
             this.tokenPanel.SuspendLayout();
             this.friendFloodPanel.SuspendLayout();
             this.serverFloodPanel.SuspendLayout();
             this.messageSpamPanel.SuspendLayout();
+            this.nickChangerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tokenPanel
@@ -76,7 +85,7 @@
             this.tokenPanel.Controls.Add(this.loadTokens_label);
             this.tokenPanel.Location = new System.Drawing.Point(12, 12);
             this.tokenPanel.Name = "tokenPanel";
-            this.tokenPanel.Size = new System.Drawing.Size(291, 288);
+            this.tokenPanel.Size = new System.Drawing.Size(291, 192);
             this.tokenPanel.TabIndex = 0;
             // 
             // tokenFilePath
@@ -84,7 +93,7 @@
             this.tokenFilePath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tokenFilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.tokenFilePath.Location = new System.Drawing.Point(35, 253);
+            this.tokenFilePath.Location = new System.Drawing.Point(35, 157);
             this.tokenFilePath.Name = "tokenFilePath";
             this.tokenFilePath.Size = new System.Drawing.Size(249, 22);
             this.tokenFilePath.TabIndex = 5;
@@ -94,7 +103,7 @@
             this.tokenFileLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tokenFileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tokenFileLabel.Location = new System.Drawing.Point(3, 253);
+            this.tokenFileLabel.Location = new System.Drawing.Point(3, 157);
             this.tokenFileLabel.Name = "tokenFileLabel";
             this.tokenFileLabel.Size = new System.Drawing.Size(35, 22);
             this.tokenFileLabel.TabIndex = 4;
@@ -105,7 +114,7 @@
             this.loadedTokensNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loadedTokensNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.loadedTokensNumber.Location = new System.Drawing.Point(112, 226);
+            this.loadedTokensNumber.Location = new System.Drawing.Point(112, 130);
             this.loadedTokensNumber.Name = "loadedTokensNumber";
             this.loadedTokensNumber.Size = new System.Drawing.Size(172, 17);
             this.loadedTokensNumber.TabIndex = 3;
@@ -116,7 +125,7 @@
             this.loadedTokensLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loadedTokensLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.loadedTokensLabel.Location = new System.Drawing.Point(3, 226);
+            this.loadedTokensLabel.Location = new System.Drawing.Point(3, 130);
             this.loadedTokensLabel.Name = "loadedTokensLabel";
             this.loadedTokensLabel.Size = new System.Drawing.Size(112, 17);
             this.loadedTokensLabel.TabIndex = 2;
@@ -161,7 +170,7 @@
             this.alwaysOnTop.Appearance = System.Windows.Forms.Appearance.Button;
             this.alwaysOnTop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.alwaysOnTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.alwaysOnTop.Location = new System.Drawing.Point(12, 315);
+            this.alwaysOnTop.Location = new System.Drawing.Point(12, 497);
             this.alwaysOnTop.Name = "alwaysOnTop";
             this.alwaysOnTop.Size = new System.Drawing.Size(291, 43);
             this.alwaysOnTop.TabIndex = 7;
@@ -181,7 +190,7 @@
             this.friendFloodPanel.Controls.Add(this.friendFloodLabel);
             this.friendFloodPanel.Location = new System.Drawing.Point(319, 12);
             this.friendFloodPanel.Name = "friendFloodPanel";
-            this.friendFloodPanel.Size = new System.Drawing.Size(269, 132);
+            this.friendFloodPanel.Size = new System.Drawing.Size(269, 149);
             this.friendFloodPanel.TabIndex = 8;
             // 
             // friendButton_BTN
@@ -190,7 +199,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.friendButton_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.friendButton_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.friendButton_BTN.Location = new System.Drawing.Point(3, 89);
+            this.friendButton_BTN.Location = new System.Drawing.Point(3, 106);
             this.friendButton_BTN.Name = "friendButton_BTN";
             this.friendButton_BTN.Size = new System.Drawing.Size(259, 36);
             this.friendButton_BTN.TabIndex = 8;
@@ -240,9 +249,9 @@
             this.serverFloodPanel.Controls.Add(this.serverInvite);
             this.serverFloodPanel.Controls.Add(this.serverInvite_label);
             this.serverFloodPanel.Controls.Add(this.serverFloodLabel);
-            this.serverFloodPanel.Location = new System.Drawing.Point(319, 356);
+            this.serverFloodPanel.Location = new System.Drawing.Point(319, 404);
             this.serverFloodPanel.Name = "serverFloodPanel";
-            this.serverFloodPanel.Size = new System.Drawing.Size(269, 135);
+            this.serverFloodPanel.Size = new System.Drawing.Size(269, 136);
             this.serverFloodPanel.TabIndex = 9;
             // 
             // serverFlood_BTN
@@ -251,7 +260,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.serverFlood_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.serverFlood_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.serverFlood_BTN.Location = new System.Drawing.Point(2, 90);
+            this.serverFlood_BTN.Location = new System.Drawing.Point(2, 91);
             this.serverFlood_BTN.Name = "serverFlood_BTN";
             this.serverFlood_BTN.Size = new System.Drawing.Size(259, 38);
             this.serverFlood_BTN.TabIndex = 9;
@@ -400,27 +409,14 @@
             this.creditsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.creditsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.creditsLabel.Location = new System.Drawing.Point(319, 147);
+            this.creditsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.creditsLabel.Location = new System.Drawing.Point(12, 207);
             this.creditsLabel.Name = "creditsLabel";
-            this.creditsLabel.Size = new System.Drawing.Size(263, 206);
+            this.creditsLabel.Size = new System.Drawing.Size(291, 237);
             this.creditsLabel.TabIndex = 11;
-            this.creditsLabel.Text = "V1.1\r\nBy threadexio on Github";
+            this.creditsLabel.Text = "V1.2\r\nBy threadexio on Github\r\n\r\nhttps://github.com/threadexio/FDiscord\r\n\r\n\r\nIf y" +
+    "ou find any bugs, please be sure to open an issue on Github";
             this.creditsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // console
-            // 
-            this.console.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.console.Location = new System.Drawing.Point(12, 364);
-            this.console.Multiline = true;
-            this.console.Name = "console";
-            this.console.ReadOnly = true;
-            this.console.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.console.Size = new System.Drawing.Size(301, 176);
-            this.console.TabIndex = 12;
-            this.console.TabStop = false;
-            this.console.WordWrap = false;
             // 
             // clearLog_BTN
             // 
@@ -428,13 +424,123 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clearLog_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearLog_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.clearLog_BTN.Location = new System.Drawing.Point(319, 497);
+            this.clearLog_BTN.Location = new System.Drawing.Point(12, 448);
             this.clearLog_BTN.Name = "clearLog_BTN";
-            this.clearLog_BTN.Size = new System.Drawing.Size(269, 43);
+            this.clearLog_BTN.Size = new System.Drawing.Size(291, 43);
             this.clearLog_BTN.TabIndex = 13;
             this.clearLog_BTN.Text = "Clear Log";
             this.clearLog_BTN.UseVisualStyleBackColor = true;
             this.clearLog_BTN.Click += new System.EventHandler(this.clearLog_BTN_Click);
+            // 
+            // nickChangerPanel
+            // 
+            this.nickChangerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nickChangerPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.nickChangerPanel.Controls.Add(this.nickChanger_Stop_BTN);
+            this.nickChangerPanel.Controls.Add(this.label5);
+            this.nickChangerPanel.Controls.Add(this.serverid);
+            this.nickChangerPanel.Controls.Add(this.serveridLabel);
+            this.nickChangerPanel.Controls.Add(this.nickChanger_BTN);
+            this.nickChangerPanel.Controls.Add(this.nick);
+            this.nickChangerPanel.Controls.Add(this.nickLablel);
+            this.nickChangerPanel.Controls.Add(this.nickChangerLabel);
+            this.nickChangerPanel.Location = new System.Drawing.Point(319, 171);
+            this.nickChangerPanel.Name = "nickChangerPanel";
+            this.nickChangerPanel.Size = new System.Drawing.Size(269, 227);
+            this.nickChangerPanel.TabIndex = 9;
+            // 
+            // nickChanger_BTN
+            // 
+            this.nickChanger_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nickChanger_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nickChanger_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nickChanger_BTN.Location = new System.Drawing.Point(3, 140);
+            this.nickChanger_BTN.Name = "nickChanger_BTN";
+            this.nickChanger_BTN.Size = new System.Drawing.Size(259, 36);
+            this.nickChanger_BTN.TabIndex = 8;
+            this.nickChanger_BTN.Text = "Start";
+            this.nickChanger_BTN.UseVisualStyleBackColor = true;
+            this.nickChanger_BTN.Click += new System.EventHandler(this.nickChanger_BTN_Click);
+            // 
+            // nick
+            // 
+            this.nick.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nick.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.nick.Location = new System.Drawing.Point(81, 54);
+            this.nick.Name = "nick";
+            this.nick.Size = new System.Drawing.Size(180, 21);
+            this.nick.TabIndex = 7;
+            // 
+            // nickLablel
+            // 
+            this.nickLablel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.nickLablel.Location = new System.Drawing.Point(3, 55);
+            this.nickLablel.Name = "nickLablel";
+            this.nickLablel.Size = new System.Drawing.Size(72, 22);
+            this.nickLablel.TabIndex = 6;
+            this.nickLablel.Text = "Nick:";
+            this.nickLablel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nickChangerLabel
+            // 
+            this.nickChangerLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nickChangerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nickChangerLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nickChangerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nickChangerLabel.Location = new System.Drawing.Point(-2, -2);
+            this.nickChangerLabel.Name = "nickChangerLabel";
+            this.nickChangerLabel.Size = new System.Drawing.Size(269, 40);
+            this.nickChangerLabel.TabIndex = 6;
+            this.nickChangerLabel.Text = "Nick Changer";
+            this.nickChangerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // serverid
+            // 
+            this.serverid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.serverid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.serverid.Location = new System.Drawing.Point(81, 113);
+            this.serverid.Name = "serverid";
+            this.serverid.Size = new System.Drawing.Size(180, 21);
+            this.serverid.TabIndex = 10;
+            // 
+            // serveridLabel
+            // 
+            this.serveridLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.serveridLabel.Location = new System.Drawing.Point(3, 114);
+            this.serveridLabel.Name = "serveridLabel";
+            this.serveridLabel.Size = new System.Drawing.Size(72, 22);
+            this.serveridLabel.TabIndex = 9;
+            this.serveridLabel.Text = "Server:";
+            this.serveridLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label5.Location = new System.Drawing.Point(3, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(258, 32);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Note: Leave empty for random nicks";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nickChanger_Stop_BTN
+            // 
+            this.nickChanger_Stop_BTN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nickChanger_Stop_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nickChanger_Stop_BTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nickChanger_Stop_BTN.Location = new System.Drawing.Point(2, 182);
+            this.nickChanger_Stop_BTN.Name = "nickChanger_Stop_BTN";
+            this.nickChanger_Stop_BTN.Size = new System.Drawing.Size(259, 36);
+            this.nickChanger_Stop_BTN.TabIndex = 12;
+            this.nickChanger_Stop_BTN.Text = "Stop";
+            this.nickChanger_Stop_BTN.UseVisualStyleBackColor = true;
+            this.nickChanger_Stop_BTN.Click += new System.EventHandler(this.nickChanger_Stop_BTN_Click);
             // 
             // Form1
             // 
@@ -442,8 +548,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(874, 552);
+            this.Controls.Add(this.nickChangerPanel);
             this.Controls.Add(this.clearLog_BTN);
-            this.Controls.Add(this.console);
             this.Controls.Add(this.creditsLabel);
             this.Controls.Add(this.messageSpamPanel);
             this.Controls.Add(this.serverFloodPanel);
@@ -462,8 +568,9 @@
             this.serverFloodPanel.PerformLayout();
             this.messageSpamPanel.ResumeLayout(false);
             this.messageSpamPanel.PerformLayout();
+            this.nickChangerPanel.ResumeLayout(false);
+            this.nickChangerPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -496,9 +603,17 @@
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.TextBox channedId;
         private System.Windows.Forms.Label creditsLabel;
-        private System.Windows.Forms.TextBox console;
         private System.Windows.Forms.Button messageSpam_Stop_BTN;
         private System.Windows.Forms.Button clearLog_BTN;
+        private System.Windows.Forms.Panel nickChangerPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox serverid;
+        private System.Windows.Forms.Label serveridLabel;
+        private System.Windows.Forms.Button nickChanger_BTN;
+        private System.Windows.Forms.TextBox nick;
+        private System.Windows.Forms.Label nickLablel;
+        private System.Windows.Forms.Label nickChangerLabel;
+        private System.Windows.Forms.Button nickChanger_Stop_BTN;
     }
 }
 
